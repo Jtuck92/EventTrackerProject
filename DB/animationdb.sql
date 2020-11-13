@@ -16,11 +16,11 @@ CREATE SCHEMA IF NOT EXISTS `animationdb` DEFAULT CHARACTER SET utf8 ;
 USE `animationdb` ;
 
 -- -----------------------------------------------------
--- Table `animatedFeature`
+-- Table `animated_feature`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `animatedFeature` ;
+DROP TABLE IF EXISTS `animated_feature` ;
 
-CREATE TABLE IF NOT EXISTS `animatedFeature` (
+CREATE TABLE IF NOT EXISTS `animated_feature` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
@@ -38,11 +38,11 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- Data for table `animatedFeature`
+-- Data for table `animated_feature`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `animationdb`;
-INSERT INTO `animatedFeature` (`id`, `title`) VALUES (1, 'Spirited Away');
+INSERT INTO `animated_feature` (`id`, `title`) VALUES (1, 'Spirited Away');
 
 COMMIT;
 
