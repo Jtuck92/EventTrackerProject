@@ -45,5 +45,11 @@ class AnimatedFeatureTest {
 		assertNotNull(anime);
 		assertEquals("Spirited Away", anime.getTitle());
 	}
+	
+	@Test 
+	void test2() {
+		assertNotNull(anime);
+		assertEquals("Fantasy", anime.getGenre());
+	}
 
 }

@@ -23,6 +23,11 @@ DROP TABLE IF EXISTS `animated_feature` ;
 CREATE TABLE IF NOT EXISTS `animated_feature` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(100) NOT NULL,
+  `length` INT NULL,
+  `director` VARCHAR(100) NULL,
+  `description` VARCHAR(500) NULL,
+  `release_year` VARCHAR(4) NULL,
+  `genre` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -42,7 +47,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `animationdb`;
-INSERT INTO `animated_feature` (`id`, `title`) VALUES (1, 'Spirited Away');
+INSERT INTO `animated_feature` (`id`, `title`, `length`, `director`, `description`, `release_year`, `genre`) VALUES (1, 'Spirited Away', 125, 'Hayao Miyazaki', NULL, '2001', 'Fantasy');
+INSERT INTO `animated_feature` (`id`, `title`, `length`, `director`, `description`, `release_year`, `genre`) VALUES (2, 'Summer Wars', 115, 'Mamoru Hosoda', NULL, '2009', 'Sci-Fi');
 
 COMMIT;
 
