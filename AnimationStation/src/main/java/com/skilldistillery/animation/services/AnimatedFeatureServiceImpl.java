@@ -50,7 +50,7 @@ public class AnimatedFeatureServiceImpl implements AnimatedFeatureService {
 			managedFeature.setReleaseYear(feature.getReleaseYear());
 			managedFeature.setGenre(feature.getGenre());
 		}
-		
+		repo.saveAndFlush(feature);
 		return managedFeature;
 	}
 
