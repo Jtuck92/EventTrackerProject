@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Animation Station</title>
-</head>
-<body>
-
-<h1>The Animation Station</h1>
-
-<script type="text/javascript" src="js/eventTracker.js"></script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animation Station</title>
+    <script type="text/javascript" src="js/eventTracker.js"></script>
+  </head>
+  <body>
+    <h1>The Animation Station</h1>
+    <div id="featureList"></div>
+    <div id="featureCreate">
+      <h3>Add animation to the archive!</h3>
+      <form name="featureCreateForm" id="featureCreateForm">
+        <input type="text" name="title" placeholder="Title" /> <br>
+        <input type="text" name="length" placeholder="Length in minutes" /> <br>
+        <input type="text" name="director" placeholder="Director's name" /> <br>
+        <input type="text" name="description" placeholder="Plot overview" /> <br>
+        <input type="text" name="releaseYear" placeholder="Release year" /> <br>
+        <input type="text" name="genre" placeholder="Genre" /> <br>
+        <input type="submit" name="createFeatureButton" value="Add it!" />
+      </form>
+    </div>
+    <div id="featureDetails"></div>
+    <div id="featureEdit"></div>
+  </body>
 </html>
