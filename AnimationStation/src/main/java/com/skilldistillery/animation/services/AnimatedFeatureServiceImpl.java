@@ -33,6 +33,7 @@ public class AnimatedFeatureServiceImpl implements AnimatedFeatureService {
 	@Override
 	public AnimatedFeature create(AnimatedFeature feature) {
 		repo.saveAndFlush(feature);
+		System.out.println("*******" + feature);
 		return feature;
 	}
 

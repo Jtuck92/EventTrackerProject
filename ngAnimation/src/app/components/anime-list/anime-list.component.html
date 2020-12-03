@@ -1,0 +1,41 @@
+<h1>Animation Station</h1>
+<h3>{{ animeCount() }} Titles Archived!</h3>
+<table *ngIf="!selected">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Length</th>
+      <th>Director</th>
+      <th>Description</th>
+      <th>Release Year</th>
+      <th>Gnere</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let anime of animes">
+      <td (click)="displayAnime(anime)">{{ anime.title }}</td>
+      <td><button (click)="deleteAnime(anime.id)">X</button></td>
+    </tr>
+  </tbody>
+</table>
+<form *ngIf="!selected">
+  <input [(ngModel)]='newAnime.title' type="text" name="title" />
+  <button (click)="addAnime()">Add Animation</button>
+</form>
+<div *ngIf="selected && !editAnime">
+  <p>{{ selected.id }}</p>
+  <p>{{ selected.title }}</p>
+  <p>{{ selected.length }}</p>
+  <p>{{ selected.director }}</p>
+  <p>{{ selected.description }}</p>
+  <p>{{ selected.releaseYear }}</p>
+  <p>{{ selected.genre }}</p>
+  <button (click)="displayAnime()">Back</button>
+  <button (click)="setEditAnime()">Edit</button>
+</div>
+<form *ngIf="editAnime">
+  <input type="text" name="title" />
+  <input type="text" name="description" />
+  <button (click)="updateAnime(editAnime)">Save</button>
+  <button (click)="editAnime = null">Cancel</button>
+</form>
