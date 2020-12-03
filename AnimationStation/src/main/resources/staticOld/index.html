@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Station</title>
+    <script type="text/javascript" src="js/eventTracker.js"></script>
+</head>
+<body>
+    <div class="container"></div>
+    <h1>The Animation Station</h1>
+    <hr />
+    <form name="showAllFeatures">
+        <button name="showAllFeatures">All Features</button>
+    </form>
+    <br />
+    <hr />
+    <form name="featureForm">
+        <input type="number" name="id">
+        <button name="lookup">Search by Id</button>
+    </form>
+    <div id="output">
+        <div id="featureData"></div>
+        <br>
+    </div>
+    <br>
+    <h2>Add New Feature</h2>
+    <form name="newFeatureForm">
+        Title: <input type="text" name="title" placeholder="Title"><br>
+        Description: <input type="text" name="description" placeholder="Description"><br>
+        Length: <input type="text" name="length" placeholder="Length in Minutes"><br>
+        Directed by: <input type="text" name="director" placeholder="Director"><br>
+        Release Year: <input type="number" name="releaseYear" placeholder="release year"><br>
+        Genre: <input type="text" name="genre" placeholder="Genre"><br>
+        <button type="submit" name="submit">Add Feature</button>
+    </form>
+    <br>
+    <h2>Edit Feature</h2>
+    <form name="updateFeatureForm"></form>
+        <input type="hidden" name="id" value="${id}">
+        Title: <input type="text" name="title" placeholder="Title"><br>
+        Description: <input type="text" name="description" placeholder="Description"><br>
+        Length: <input type="text" name="length" placeholder="Length in Minutes"><br>
+        Directed by: <input type="text" name="director" placeholder="Director"><br>
+        Release Year: <input type="number" name="releaseYear" placeholder="release year"><br>
+        Genre: <input type="text" name="genre" placeholder="Genre"><br>
+        <button type="submit" name="updateFeature" value="${feature.id}">Edit Feature</button>
+
+        <h2>Delete Feature</h2>
+        <form name="deleteFeatureForm">
+            <input type="number" name="deletedFeature">
+            <button name="delete">Delete Feature by Id</button>
+        </form>
+</body>
+</html>

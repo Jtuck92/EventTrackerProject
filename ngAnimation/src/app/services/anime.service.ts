@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
@@ -7,8 +8,10 @@ import { Anime } from 'src/app/models/anime';
   providedIn: 'root',
 })
 export class AnimeService {
-  private baseUrl = 'http://localhost:8085/';
-  private url = this.baseUrl + 'api/features';
+  // private baseUrl = 'http://localhost:8085/';
+  // private url = this.baseUrl + 'api/features';
+  baseUrl = environment.baseUrl;
+  url = this.baseUrl + 'api/features';
 
   constructor(private http: HttpClient) {}
 
